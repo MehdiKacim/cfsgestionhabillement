@@ -12,16 +12,29 @@ namespace cfsgestionhabillement
 {
     public partial class Main : Form
     {
+        /// <summary>
+        /// Constructeur
+        /// </summary>
         public Main()
         {
             InitializeComponent();
         }
 
+        /// <summary>
+        /// Chargement de l'appli
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Main_Load(object sender, EventArgs e)
         {
             Guna.UI.Lib.GraphicsHelper.ShadowForm(this);
         }
 
+        /// <summary>
+        /// Fermerture de l'application
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void gunaControlBox1_Click(object sender, EventArgs e)
         {
             MessageBoxButtons buttons = MessageBoxButtons.YesNo;
