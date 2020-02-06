@@ -1,11 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace cfsgestionhabillement
@@ -18,6 +12,18 @@ namespace cfsgestionhabillement
         public Main()
         {
             InitializeComponent();
+
+            Btn_Home_CheckedChanged(null, null);
+        }
+
+        private void Btn_Secouristes_CheckedChanged(object sender, System.EventArgs e)
+        {
+            if (btn_Secouristes.Checked) pSecouristes.BringToFront();
+        }
+
+        private void Btn_Home_CheckedChanged(object sender, System.EventArgs e)
+        {
+            if (btn_Home.Checked) pHome.BringToFront();
         }
 
         /// <summary>
@@ -28,6 +34,8 @@ namespace cfsgestionhabillement
         private void Main_Load(object sender, EventArgs e)
         {
             Guna.UI.Lib.GraphicsHelper.ShadowForm(this);
+            Guna.UI.Lib.GraphicsHelper.DrawLineShadow(pnBody,Color.Black,20,5,Guna.UI.WinForms.VerHorAlign.HoriziontalTop);
+            
         }
 
         /// <summary>
@@ -37,6 +45,7 @@ namespace cfsgestionhabillement
         /// <param name="e"></param>
         private void gunaControlBox1_Click(object sender, EventArgs e)
         {
+            
             MessageBoxButtons buttons = MessageBoxButtons.YesNo;
             DialogResult result;
             string message = "Voulez-vous vraiment fermer l'application ?";
