@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Drawing;
 using System.Windows.Forms;
+using cfsgestionhabillement.UIL.LogIN;
 
 namespace cfsgestionhabillement
 {
@@ -16,9 +17,14 @@ namespace cfsgestionhabillement
             Btn_Home_CheckedChanged(null, null);
         }
 
-        private void Btn_Secouristes_CheckedChanged(object sender, System.EventArgs e)
+        private void Btn_Connexion_CheckedChanged(object sender, System.EventArgs e)
         {
-            if (btn_Secouristes.Checked) pSecouristes.BringToFront();
+            if (btn_Connexion.Checked)
+            {
+                Form fLogin = new FrmLogin();
+                fLogin.Show();
+              
+            }
         }
 
         private void Btn_Home_CheckedChanged(object sender, System.EventArgs e)

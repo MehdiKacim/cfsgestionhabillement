@@ -35,7 +35,7 @@
             this.gunaControlBox1 = new Guna.UI.WinForms.GunaControlBox();
             this.gunaLabel1 = new Guna.UI.WinForms.GunaLabel();
             this.gunaPanel2 = new Guna.UI.WinForms.GunaPanel();
-            this.btn_Secouristes = new Guna.UI.WinForms.GunaAdvenceButton();
+            this.btn_Connexion = new Guna.UI.WinForms.GunaAdvenceButton();
             this.btn_Home = new Guna.UI.WinForms.GunaAdvenceButton();
             this.pnBody = new Guna.UI.WinForms.GunaPanel();
             this.pHome = new System.Windows.Forms.Panel();
@@ -47,14 +47,10 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.lblHome = new System.Windows.Forms.Label();
-            this.pSecouristes = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.gunaPanel1.SuspendLayout();
             this.gunaPanel2.SuspendLayout();
             this.pnBody.SuspendLayout();
             this.pHome.SuspendLayout();
-            this.pSecouristes.SuspendLayout();
             this.SuspendLayout();
             // 
             // gunaDragControl1
@@ -104,51 +100,51 @@
             // 
             this.gunaPanel2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.gunaPanel2.BackColor = System.Drawing.Color.White;
-            this.gunaPanel2.Controls.Add(this.btn_Secouristes);
+            this.gunaPanel2.Controls.Add(this.btn_Connexion);
             this.gunaPanel2.Controls.Add(this.btn_Home);
             this.gunaPanel2.Location = new System.Drawing.Point(-8, 54);
             this.gunaPanel2.Name = "gunaPanel2";
             this.gunaPanel2.Size = new System.Drawing.Size(1094, 45);
             this.gunaPanel2.TabIndex = 1;
             // 
-            // btn_Secouristes
+            // btn_Connexion
             // 
-            this.btn_Secouristes.Animated = true;
-            this.btn_Secouristes.AnimationHoverSpeed = 0.07F;
-            this.btn_Secouristes.AnimationSpeed = 0.03F;
-            this.btn_Secouristes.BackColor = System.Drawing.Color.White;
-            this.btn_Secouristes.BaseColor = System.Drawing.Color.White;
-            this.btn_Secouristes.BorderColor = System.Drawing.Color.Black;
-            this.btn_Secouristes.ButtonType = Guna.UI.WinForms.AdvenceButtonType.RadioButton;
-            this.btn_Secouristes.CheckedBaseColor = System.Drawing.Color.Transparent;
-            this.btn_Secouristes.CheckedBorderColor = System.Drawing.Color.Black;
-            this.btn_Secouristes.CheckedForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(50)))), ((int)(((byte)(68)))));
-            this.btn_Secouristes.CheckedImage = ((System.Drawing.Image)(resources.GetObject("btn_Secouristes.CheckedImage")));
-            this.btn_Secouristes.CheckedLineColor = System.Drawing.Color.DimGray;
-            this.btn_Secouristes.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btn_Secouristes.Dock = System.Windows.Forms.DockStyle.Left;
-            this.btn_Secouristes.FocusedColor = System.Drawing.Color.Empty;
-            this.btn_Secouristes.Font = new System.Drawing.Font("Segoe UI Semibold", 12F);
-            this.btn_Secouristes.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(50)))), ((int)(((byte)(68)))));
-            this.btn_Secouristes.Image = null;
-            this.btn_Secouristes.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.btn_Secouristes.ImageSize = new System.Drawing.Size(20, 20);
-            this.btn_Secouristes.LineBottom = 4;
-            this.btn_Secouristes.LineColor = System.Drawing.Color.White;
-            this.btn_Secouristes.Location = new System.Drawing.Point(180, 0);
-            this.btn_Secouristes.Name = "btn_Secouristes";
-            this.btn_Secouristes.OnHoverBaseColor = System.Drawing.Color.White;
-            this.btn_Secouristes.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.btn_Secouristes.OnHoverForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(144)))), ((int)(((byte)(150)))), ((int)(((byte)(168)))));
-            this.btn_Secouristes.OnHoverImage = null;
-            this.btn_Secouristes.OnHoverLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(144)))), ((int)(((byte)(150)))), ((int)(((byte)(168)))));
-            this.btn_Secouristes.OnPressedColor = System.Drawing.Color.White;
-            this.btn_Secouristes.OnPressedDepth = 0;
-            this.btn_Secouristes.Size = new System.Drawing.Size(180, 45);
-            this.btn_Secouristes.TabIndex = 15;
-            this.btn_Secouristes.Text = "Secouristes";
-            this.btn_Secouristes.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.btn_Secouristes.CheckedChanged += this.Btn_Secouristes_CheckedChanged;
+            this.btn_Connexion.Animated = true;
+            this.btn_Connexion.AnimationHoverSpeed = 0.07F;
+            this.btn_Connexion.AnimationSpeed = 0.03F;
+            this.btn_Connexion.BackColor = System.Drawing.Color.White;
+            this.btn_Connexion.BaseColor = System.Drawing.Color.White;
+            this.btn_Connexion.BorderColor = System.Drawing.Color.Black;
+            this.btn_Connexion.ButtonType = Guna.UI.WinForms.AdvenceButtonType.RadioButton;
+            this.btn_Connexion.CheckedBaseColor = System.Drawing.Color.Transparent;
+            this.btn_Connexion.CheckedBorderColor = System.Drawing.Color.Black;
+            this.btn_Connexion.CheckedForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(50)))), ((int)(((byte)(68)))));
+            this.btn_Connexion.CheckedImage = ((System.Drawing.Image)(resources.GetObject("btn_Connexion.CheckedImage")));
+            this.btn_Connexion.CheckedLineColor = System.Drawing.Color.DimGray;
+            this.btn_Connexion.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btn_Connexion.Dock = System.Windows.Forms.DockStyle.Left;
+            this.btn_Connexion.FocusedColor = System.Drawing.Color.Empty;
+            this.btn_Connexion.Font = new System.Drawing.Font("Segoe UI Semibold", 12F);
+            this.btn_Connexion.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(50)))), ((int)(((byte)(68)))));
+            this.btn_Connexion.Image = null;
+            this.btn_Connexion.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btn_Connexion.ImageSize = new System.Drawing.Size(20, 20);
+            this.btn_Connexion.LineBottom = 4;
+            this.btn_Connexion.LineColor = System.Drawing.Color.White;
+            this.btn_Connexion.Location = new System.Drawing.Point(180, 0);
+            this.btn_Connexion.Name = "btn_Connexion";
+            this.btn_Connexion.OnHoverBaseColor = System.Drawing.Color.White;
+            this.btn_Connexion.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btn_Connexion.OnHoverForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(144)))), ((int)(((byte)(150)))), ((int)(((byte)(168)))));
+            this.btn_Connexion.OnHoverImage = null;
+            this.btn_Connexion.OnHoverLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(144)))), ((int)(((byte)(150)))), ((int)(((byte)(168)))));
+            this.btn_Connexion.OnPressedColor = System.Drawing.Color.White;
+            this.btn_Connexion.OnPressedDepth = 0;
+            this.btn_Connexion.Size = new System.Drawing.Size(180, 45);
+            this.btn_Connexion.TabIndex = 15;
+            this.btn_Connexion.Text = "Connexion";
+            this.btn_Connexion.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btn_Connexion.CheckedChanged += this.Btn_Connexion_CheckedChanged;
             // 
             // btn_Home
             // 
@@ -187,11 +183,9 @@
             this.btn_Home.TabIndex = 14;
             this.btn_Home.Text = "Home";
             this.btn_Home.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.btn_Home.CheckedChanged += this.Btn_Home_CheckedChanged;
             // 
             // pnBody
             // 
-            this.pnBody.Controls.Add(this.pSecouristes);
             this.pnBody.Controls.Add(this.pHome);
             this.pnBody.Location = new System.Drawing.Point(-5, 99);
             this.pnBody.Name = "pnBody";
@@ -314,40 +308,6 @@
             this.lblHome.TabIndex = 0;
             this.lblHome.Text = "Home";
             // 
-            // pSecouristes
-            // 
-            this.pSecouristes.Controls.Add(this.label2);
-            this.pSecouristes.Controls.Add(this.label3);
-            this.pSecouristes.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pSecouristes.Location = new System.Drawing.Point(0, 0);
-            this.pSecouristes.Name = "pSecouristes";
-            this.pSecouristes.Size = new System.Drawing.Size(1077, 353);
-            this.pSecouristes.TabIndex = 2;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.White;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(70)))), ((int)(((byte)(108)))));
-            this.label2.Location = new System.Drawing.Point(15, 41);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(89, 21);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "Secouristes";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.White;
-            this.label3.Font = new System.Drawing.Font("Segoe UI", 18F);
-            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(50)))), ((int)(((byte)(68)))));
-            this.label3.Location = new System.Drawing.Point(13, 9);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(135, 32);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Secouristes";
-            // 
             // Main
             // 
             this.AllowDrop = true;
@@ -371,8 +331,6 @@
             this.pnBody.ResumeLayout(false);
             this.pHome.ResumeLayout(false);
             this.pHome.PerformLayout();
-            this.pSecouristes.ResumeLayout(false);
-            this.pSecouristes.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -385,7 +343,7 @@
         private Guna.UI.WinForms.GunaControlBox gunaControlBox1;
         private Guna.UI.WinForms.GunaPanel gunaPanel2;
         private Guna.UI.WinForms.GunaAdvenceButton btn_Home;
-        private Guna.UI.WinForms.GunaAdvenceButton btn_Secouristes;
+        private Guna.UI.WinForms.GunaAdvenceButton btn_Connexion;
         private Guna.UI.WinForms.GunaPanel pnBody;
         private System.Windows.Forms.Panel pHome;
         private System.Windows.Forms.Label label1;
@@ -396,9 +354,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Panel pSecouristes;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
     }
 }
 
