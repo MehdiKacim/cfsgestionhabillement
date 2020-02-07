@@ -50,7 +50,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="class\Auth.cs" />
+    <Compile Include="class\Auth\Auth.cs" />
+    <Compile Include="class\database\MySqlUtils.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
