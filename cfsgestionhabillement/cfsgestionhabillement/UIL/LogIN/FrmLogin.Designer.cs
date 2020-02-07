@@ -39,6 +39,7 @@
             this.tb_User = new Guna.UI.WinForms.GunaLineTextBox();
             this.tb_Password = new Guna.UI.WinForms.GunaLineTextBox();
             this.gunaAdvenceButton1 = new Guna.UI.WinForms.GunaAdvenceButton();
+            this.spinnerLog = new Guna.UI.WinForms.GunaWinCircleProgressIndicator();
             this.gunaPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -149,8 +150,10 @@
             // 
             // gunaAdvenceButton1
             // 
+            this.gunaAdvenceButton1.Animated = true;
             this.gunaAdvenceButton1.AnimationHoverSpeed = 0.07F;
             this.gunaAdvenceButton1.AnimationSpeed = 0.03F;
+            this.gunaAdvenceButton1.BackColor = System.Drawing.Color.Transparent;
             this.gunaAdvenceButton1.BaseColor = System.Drawing.Color.Olive;
             this.gunaAdvenceButton1.BorderColor = System.Drawing.Color.Black;
             this.gunaAdvenceButton1.CheckedBaseColor = System.Drawing.Color.Gray;
@@ -165,7 +168,7 @@
             this.gunaAdvenceButton1.Image = null;
             this.gunaAdvenceButton1.ImageSize = new System.Drawing.Size(20, 20);
             this.gunaAdvenceButton1.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(58)))), ((int)(((byte)(170)))));
-            this.gunaAdvenceButton1.Location = new System.Drawing.Point(191, 236);
+            this.gunaAdvenceButton1.Location = new System.Drawing.Point(19, 236);
             this.gunaAdvenceButton1.Name = "gunaAdvenceButton1";
             this.gunaAdvenceButton1.OnHoverBaseColor = System.Drawing.Color.LimeGreen;
             this.gunaAdvenceButton1.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -173,10 +176,22 @@
             this.gunaAdvenceButton1.OnHoverImage = null;
             this.gunaAdvenceButton1.OnHoverLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(58)))), ((int)(((byte)(170)))));
             this.gunaAdvenceButton1.OnPressedColor = System.Drawing.Color.Black;
-            this.gunaAdvenceButton1.Size = new System.Drawing.Size(101, 39);
+            this.gunaAdvenceButton1.Radius = 10;
+            this.gunaAdvenceButton1.Size = new System.Drawing.Size(220, 39);
             this.gunaAdvenceButton1.TabIndex = 7;
             this.gunaAdvenceButton1.Text = "Connexion";
             this.gunaAdvenceButton1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.gunaAdvenceButton1.Click += new System.EventHandler(this.gunaAdvenceButton1_Click);
+            // 
+            // spinnerLog
+            // 
+            this.spinnerLog.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.spinnerLog.Location = new System.Drawing.Point(253, 236);
+            this.spinnerLog.Name = "spinnerLog";
+            this.spinnerLog.ProgressColor = System.Drawing.Color.DodgerBlue;
+            this.spinnerLog.Size = new System.Drawing.Size(39, 39);
+            this.spinnerLog.TabIndex = 8;
+            this.spinnerLog.Visible = false;
             // 
             // FrmLogin
             // 
@@ -184,6 +199,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(328, 451);
+            this.Controls.Add(this.spinnerLog);
             this.Controls.Add(this.gunaAdvenceButton1);
             this.Controls.Add(this.tb_Password);
             this.Controls.Add(this.tb_User);
@@ -213,5 +229,6 @@
         private Guna.UI.WinForms.GunaLineTextBox tb_User;
         private Guna.UI.WinForms.GunaLineTextBox tb_Password;
         private Guna.UI.WinForms.GunaAdvenceButton gunaAdvenceButton1;
+        private Guna.UI.WinForms.GunaWinCircleProgressIndicator spinnerLog;
     }
 }

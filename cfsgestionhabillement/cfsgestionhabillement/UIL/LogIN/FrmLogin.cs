@@ -21,5 +21,10 @@ namespace cfsgestionhabillement.UIL.LogIN
         {
             this.Close();
         }
+
+        private void gunaAdvenceButton1_Click(object sender, EventArgs e)
+        {
+            spinnerLog.Visible = true;
+        }
     }
 }
