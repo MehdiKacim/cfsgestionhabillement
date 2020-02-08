@@ -31,8 +31,8 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmLogin));
             this.gunaPanel1 = new Guna.UI.WinForms.GunaPanel();
-            this.gunaControlBox1 = new Guna.UI.WinForms.GunaControlBox();
             this.gunaLabel1 = new Guna.UI.WinForms.GunaLabel();
+            this.gunaControlBox1 = new Guna.UI.WinForms.GunaControlBox();
             this.gunaDragControl1 = new Guna.UI.WinForms.GunaDragControl(this.components);
             this.lblHome = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -40,6 +40,8 @@
             this.tb_User = new Guna.UI.WinForms.GunaLineTextBox();
             this.tb_Password = new Guna.UI.WinForms.GunaLineTextBox();
             this.gunaAdvenceButton1 = new Guna.UI.WinForms.GunaAdvenceButton();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.gunaControlBox2 = new Guna.UI.WinForms.GunaControlBox();
             this.gunaPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -48,13 +50,24 @@
             // 
             this.gunaPanel1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.gunaPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(50)))), ((int)(((byte)(68)))));
+            this.gunaPanel1.Controls.Add(this.gunaControlBox2);
             this.gunaPanel1.Controls.Add(this.pictureBox1);
-            this.gunaPanel1.Controls.Add(this.gunaControlBox1);
             this.gunaPanel1.Controls.Add(this.gunaLabel1);
             this.gunaPanel1.Location = new System.Drawing.Point(-2, 0);
             this.gunaPanel1.Name = "gunaPanel1";
             this.gunaPanel1.Size = new System.Drawing.Size(335, 55);
             this.gunaPanel1.TabIndex = 1;
+            // 
+            // gunaLabel1
+            // 
+            this.gunaLabel1.AutoSize = true;
+            this.gunaLabel1.Font = new System.Drawing.Font("Segoe UI Semibold", 12F);
+            this.gunaLabel1.ForeColor = System.Drawing.Color.White;
+            this.gunaLabel1.Location = new System.Drawing.Point(53, 18);
+            this.gunaLabel1.Name = "gunaLabel1";
+            this.gunaLabel1.Size = new System.Drawing.Size(88, 21);
+            this.gunaLabel1.TabIndex = 0;
+            this.gunaLabel1.Text = "Connexion";
             // 
             // gunaControlBox1
             // 
@@ -72,17 +85,6 @@
             this.gunaControlBox1.Size = new System.Drawing.Size(55, 55);
             this.gunaControlBox1.TabIndex = 1;
             this.gunaControlBox1.Click += new System.EventHandler(this.gunaControlBox1_Click);
-            // 
-            // gunaLabel1
-            // 
-            this.gunaLabel1.AutoSize = true;
-            this.gunaLabel1.Font = new System.Drawing.Font("Segoe UI Semibold", 12F);
-            this.gunaLabel1.ForeColor = System.Drawing.Color.White;
-            this.gunaLabel1.Location = new System.Drawing.Point(53, 18);
-            this.gunaLabel1.Name = "gunaLabel1";
-            this.gunaLabel1.Size = new System.Drawing.Size(88, 21);
-            this.gunaLabel1.TabIndex = 0;
-            this.gunaLabel1.Text = "Connexion";
             // 
             // gunaDragControl1
             // 
@@ -170,7 +172,7 @@
             this.gunaAdvenceButton1.Image = null;
             this.gunaAdvenceButton1.ImageSize = new System.Drawing.Size(20, 20);
             this.gunaAdvenceButton1.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(58)))), ((int)(((byte)(170)))));
-            this.gunaAdvenceButton1.Location = new System.Drawing.Point(19, 236);
+            this.gunaAdvenceButton1.Location = new System.Drawing.Point(140, 236);
             this.gunaAdvenceButton1.Name = "gunaAdvenceButton1";
             this.gunaAdvenceButton1.OnHoverBaseColor = System.Drawing.Color.LimeGreen;
             this.gunaAdvenceButton1.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -179,21 +181,36 @@
             this.gunaAdvenceButton1.OnHoverLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(58)))), ((int)(((byte)(170)))));
             this.gunaAdvenceButton1.OnPressedColor = System.Drawing.Color.Black;
             this.gunaAdvenceButton1.Radius = 10;
-            this.gunaAdvenceButton1.Size = new System.Drawing.Size(220, 39);
+            this.gunaAdvenceButton1.Size = new System.Drawing.Size(152, 39);
             this.gunaAdvenceButton1.TabIndex = 7;
             this.gunaAdvenceButton1.Text = "Connexion";
             this.gunaAdvenceButton1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.gunaAdvenceButton1.Click += new System.EventHandler(this.gunaAdvenceButton1_Click);
             // 
-            // spinnerLog
+            // pictureBox1
             // 
-            this.spinnerLog.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.spinnerLog.Location = new System.Drawing.Point(253, 236);
-            this.spinnerLog.Name = "spinnerLog";
-            this.spinnerLog.ProgressColor = System.Drawing.Color.DodgerBlue;
-            this.spinnerLog.Size = new System.Drawing.Size(39, 39);
-            this.spinnerLog.TabIndex = 8;
-            this.spinnerLog.Visible = false;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(10, 10);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(35, 35);
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
+            // 
+            // gunaControlBox2
+            // 
+            this.gunaControlBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.gunaControlBox2.AnimationHoverSpeed = 0.07F;
+            this.gunaControlBox2.AnimationSpeed = 0.03F;
+            this.gunaControlBox2.ControlBoxTheme = Guna.UI.WinForms.FormControlBoxTheme.Custom;
+            this.gunaControlBox2.IconColor = System.Drawing.Color.White;
+            this.gunaControlBox2.IconSize = 15F;
+            this.gunaControlBox2.Location = new System.Drawing.Point(277, 0);
+            this.gunaControlBox2.Name = "gunaControlBox2";
+            this.gunaControlBox2.OnHoverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(40)))), ((int)(((byte)(58)))));
+            this.gunaControlBox2.OnHoverIconColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(70)))), ((int)(((byte)(88)))));
+            this.gunaControlBox2.OnPressedColor = System.Drawing.Color.Black;
+            this.gunaControlBox2.Size = new System.Drawing.Size(55, 55);
+            this.gunaControlBox2.TabIndex = 8;
             // 
             // FrmLogin
             // 
@@ -201,7 +218,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(328, 451);
-            this.Controls.Add(this.spinnerLog);
             this.Controls.Add(this.gunaAdvenceButton1);
             this.Controls.Add(this.tb_Password);
             this.Controls.Add(this.tb_User);
@@ -232,6 +248,7 @@
         private Guna.UI.WinForms.GunaLineTextBox tb_User;
         private Guna.UI.WinForms.GunaLineTextBox tb_Password;
         private Guna.UI.WinForms.GunaAdvenceButton gunaAdvenceButton1;
-        private Guna.UI.WinForms.GunaWinCircleProgressIndicator spinnerLog;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private Guna.UI.WinForms.GunaControlBox gunaControlBox2;
     }
 }

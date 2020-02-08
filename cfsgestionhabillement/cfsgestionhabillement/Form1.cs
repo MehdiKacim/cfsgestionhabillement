@@ -2,6 +2,7 @@
 using System.Drawing;
 using System.Windows.Forms;
 using cfsgestionhabillement.UIL.LogIN;
+using cfsgestionhabillement.database;
 
 namespace cfsgestionhabillement
 {
@@ -13,7 +14,7 @@ namespace cfsgestionhabillement
         public Main()
         {
             InitializeComponent();
-
+            Database d = new Database();
             Btn_Home_CheckedChanged(null, null);
         }
 
@@ -63,5 +64,6 @@ namespace cfsgestionhabillement
                 this.Close();
             }
         }
+
     }
 }
