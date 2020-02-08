@@ -40,8 +40,6 @@
             this.tb_User = new Guna.UI.WinForms.GunaLineTextBox();
             this.tb_Password = new Guna.UI.WinForms.GunaLineTextBox();
             this.gunaAdvenceButton1 = new Guna.UI.WinForms.GunaAdvenceButton();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.spinnerLog = new Guna.UI.WinForms.GunaWinCircleProgressIndicator();
             this.gunaPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -189,6 +187,14 @@
             // 
             // spinnerLog
             // 
+            this.spinnerLog.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.spinnerLog.Location = new System.Drawing.Point(253, 236);
+            this.spinnerLog.Name = "spinnerLog";
+            this.spinnerLog.ProgressColor = System.Drawing.Color.DodgerBlue;
+            this.spinnerLog.Size = new System.Drawing.Size(39, 39);
+            this.spinnerLog.TabIndex = 8;
+            this.spinnerLog.Visible = false;
+            // 
             // FrmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -226,5 +232,6 @@
         private Guna.UI.WinForms.GunaLineTextBox tb_User;
         private Guna.UI.WinForms.GunaLineTextBox tb_Password;
         private Guna.UI.WinForms.GunaAdvenceButton gunaAdvenceButton1;
+        private Guna.UI.WinForms.GunaWinCircleProgressIndicator spinnerLog;
     }
 }
