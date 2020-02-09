@@ -13,13 +13,13 @@ namespace cfsgestionhabillement.Entity
         public string NOM { get; set; }
         public string PRENOM { get; set; }
         public string ADRESSE { get; set; }
-        public int CODE_POSTAL { get; set; }
-        public int VILLE { get; set; }
+        public string CODE_POSTAL { get; set; }
+        public string VILLE { get; set; }
         public string EMAIL { get; set; }
         public string USERNAME { get; set; }
         public string PASSWORD { get; set; }
         public bool CAUTION { get; set; }
-        public int ID_FONCTION_ENUM { get; set; }
+        public Fonction FONCTION { get; set; }
 
     }
 }

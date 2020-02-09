@@ -3,6 +3,7 @@ using System.Drawing;
 using System.Windows.Forms;
 using cfsgestionhabillement.UIL.LogIN;
 using cfsgestionhabillement.database;
+using cfsgestionhabillement.Repository;
 
 namespace cfsgestionhabillement
 {
@@ -15,6 +16,8 @@ namespace cfsgestionhabillement
         {
             InitializeComponent();
             Database d = new Database();
+            UserRepository userRepository = new UserRepository(d);
+            userRepository.GetUsers();
             Btn_Home_CheckedChanged(null, null);
         }
 
