@@ -4,6 +4,8 @@ using System.Windows.Forms;
 using cfsgestionhabillement.database;
 using cfsgestionhabillement.Repository;
 using cfsgestionhabillement.Entity;
+using System.Security.Cryptography;
+using System.Text;
 
 namespace cfsgestionhabillement.UIL.LogIN
 {
@@ -29,10 +31,26 @@ namespace cfsgestionhabillement.UIL.LogIN
         {
             Database d = new Database();
             UserRepository userRepository = new UserRepository(d);
-            User user = null;
-            if (tb_User.Text != String.Empty  && tb_Password.Text != String.Empty)
+            bool IsAuth = false;
+            string hash;
+            using (SHA1 sha1Hash = SHA1.Create())
             {
-                user = userRepository.CheckConnexion(tb_User.Text, tb_Password.Text);
+                byte[] sourceBytes = Encoding.UTF8.GetBytes(tb_Password.Text);
+                byte[] hashBytes = sha1Hash.ComputeHash(sourceBytes);
+                hash = BitConverter.ToString(hashBytes).Replace("-", String.Empty);
+
+            }
+            if (tb_User.Text != String.Empty && tb_Password.Text != String.Empty)
+            {
+                IsAuth = userRepository.CheckConnexion(tb_User.Text, hash);
+                if (IsAuth)
+                {
+                    MessageBox.Show("ok");
+                }
+                else
+                {
+                    MessageBox.Show("ko");
+                }
             }
             else
             {
