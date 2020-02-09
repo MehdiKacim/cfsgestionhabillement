@@ -1,12 +1,9 @@
 ﻿using System;
-using cfsgestionhabillement;
 using System.Windows.Forms;
 using cfsgestionhabillement.database;
 using cfsgestionhabillement.Repository;
-using cfsgestionhabillement.Entity;
 using System.Security.Cryptography;
 using System.Text;
-
 namespace cfsgestionhabillement.UIL.LogIN
 {
     public partial class FrmLogin : Form
@@ -56,7 +53,6 @@ namespace cfsgestionhabillement.UIL.LogIN
             {
                 MessageBox.Show("Merci de remplir les champs");
             }
-
         }
     }
 }
