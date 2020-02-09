@@ -15,9 +15,6 @@ namespace cfsgestionhabillement
         public Main()
         {
             InitializeComponent();
-            Database d = new Database();
-            UserRepository userRepository = new UserRepository(d);
-            userRepository.GetUsers();
             Btn_Home_CheckedChanged(null, null);
         }
 
