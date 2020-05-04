@@ -1,53 +1,81 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using SqlKata;
+﻿using System.Linq;
 using cfsgestionhabillement.database;
 using cfsgestionhabillement.Entity;
 using MySql.Data.MySqlClient;
-using System.Security.Cryptography;
+using RepoDb;
+using System.Collections.Generic;
 
 namespace cfsgestionhabillement.Repository
 {
     class UserRepository
     {
-        Database DbConn = null;
-        MySqlConnection MySqlConn = null;
-        public UserRepository(Database db)
+        public UserRepository()
         {
-            DbConn = db;
-            MySqlConn = db.GetMySqlConnection();
+            RepoDb.MySqlBootstrap.Initialize();
         }
 
-
-        public bool CheckConnexion(string username, string password)
+        /// <summary>
+        /// Connexion
+        /// </summary>
+        /// <param name="pUSERNAME"></param>
+        /// <param name="pPASSWORD"></param>
+        /// <returns></returns>
+        public bool Connection(string pUSERNAME, string pPASSWORD)
         {
-            string sql = "SELECT * FROM secouristes,fonctions where secouristes.ID_FONCTION_ENUM = fonctions.ID_FONCTIONS";
-            sql +=  " AND USERNAME='" + username + "'";
-            sql +=  " AND PASSWORD='" + password + "'";
-            MySqlConn.Open();
-            var cmd = new MySqlCommand(sql, MySqlConn);
-
-            User user = new User();
-            MySqlDataReader rdr = cmd.ExecuteReader();
-            string hash;
-            using (SHA1 sha1Hash = SHA1.Create())
+            using (var connection = new MySqlConnection(Database.GetConnexionString()))
             {
-                byte[] sourceBytes = Encoding.UTF8.GetBytes(password);
-                byte[] hashBytes = sha1Hash.ComputeHash(sourceBytes);
-                hash = BitConverter.ToString(hashBytes).Replace("-", String.Empty);
-
+                var person = connection.Query<Secouriste>(e => e.Username_Secouriste == pUSERNAME && e.Password_Secouriste == pPASSWORD);
+                if (person.Any())
+                {
+                    Security.Security.CurrentUser = person.First();
+                    Security.Security.IsAuth = person.Any();
+                }
+                return person.Any();
             }
-            bool outBool = false;
-            while (rdr.Read())
-            {
-                    outBool = rdr.HasRows;
-            }
-            rdr.Dispose();
-            MySqlConn.Dispose();
-            return outBool;
         }
+
+        /// <summary>
+        /// CheckRow
+        /// </summary>
+        /// <param name="secouriste"></param>
+        /// <returns></returns>
+        public Dictionary<string,bool> CheckRow(Secouriste secouriste)
+        {
+            Dictionary<string, bool> result = new Dictionary<string, bool>();
+            result.Add("CodePostal_Secouriste", true);
+            result.Add("Num_Tel", true);
+            result.Add("Email", true);
+
+            if(secouriste.CodePostal_Secouriste.Length != 5)
+            {
+                result["CodePostal_Secouriste"] = false;
+            }
+
+            if(secouriste.NumeroTel_Secouriste.Length != 10)
+            {
+                result["Num_Tel"] = false;
+            }
+
+            if(!secouriste.Email_Secouriste.Contains("@") || !secouriste.Email_Secouriste.Contains("."))
+            {
+                result["Email"] = false;
+            }
+
+            return result;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="pRow"></param>
+        public bool Update(Secouriste pRow)
+        {
+            using (var connection = new MySqlConnection(Database.GetConnexionString()))
+            {
+                var updatedRows = connection.Update<Secouriste>(pRow);
+                return updatedRows == 1;
+            }
+        }
+
     }
 }

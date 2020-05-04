@@ -7,24 +7,14 @@ using System.Data.Common;
 
 namespace cfsgestionhabillement.database
 {
-    public class Database
+    public static class Database
     {
-        MySqlConnection mSqlConn = null;
-        public Database()
+        public static string GetConnexionString()
         {
-            MySqlConnection connection = new MySqlConnection(
-                "Host=127.0.0.1;Port=3306;User=root;Password=;Database=cfs_gestion_habillement;SslMode=None"
-            );
-
-            mSqlConn = connection;
+            return "Server=localhost;Database=cfs;Uid=root;Pwd=admin;";
         }
-
-        public MySqlConnection GetMySqlConnection()
-        {
-            return this.mSqlConn;
-        }
-
 
     }
+
 }
 

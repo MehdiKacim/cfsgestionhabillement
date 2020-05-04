@@ -6,10 +6,9 @@ using System.Threading.Tasks;
 
 namespace cfsgestionhabillement.Entity
 {
-    class Fonction
+    public class roleapplicatif
     {
-        public int ID_FONCTIONS { get; set; }
-        public string LIBELLE { get; set; }
-        public int ID_FONCTION_ENUM { get; set; }
+        public int ID_Fonction { get; set; }
+        public string Libelle_Fonction { get; set; }
     }
 }

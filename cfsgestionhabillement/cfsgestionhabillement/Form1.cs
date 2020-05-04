@@ -2,16 +2,12 @@
 using System.Drawing;
 using System.Windows.Forms;
 using cfsgestionhabillement.UIL.LogIN;
-using cfsgestionhabillement.database;
-using cfsgestionhabillement.Repository;
-using cfsgestionhabillement.Entity;
 
 namespace cfsgestionhabillement
 {
     public partial class Main : Form
     {
 
-        public User mUser = null;
         /// <summary>
         /// Constructeur
         /// </summary>
@@ -25,9 +21,9 @@ namespace cfsgestionhabillement
         {
             if (btn_Connexion.Checked)
             {
-                Form fLogin = new FrmLogin(this);
-                fLogin.Show();
-              
+                Form fLogin = new FrmLogin();
+                fLogin.Show(this);
+                this.Hide();
             }
         }
 
